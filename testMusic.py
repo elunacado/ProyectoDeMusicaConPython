@@ -12,13 +12,23 @@ def snare(un_pentagrama, time, force, midi):
 pentagrama = stream.Stream()
 pentagrama.append(instrument.SnareDrum())  # Tarola en lugar de bombo
 
-for i in range(0, 5):
-    snare(pentagrama, 0.25, 127, 44)
-    silence(pentagrama, 0.75)
-    snare(pentagrama, 0.25, 75, 42)
-    snare(pentagrama, 0.25, 75, 42)
-    silence(pentagrama, 0.25)
-    snare(pentagrama, 0.25, 100, 44)
-    silence(pentagrama, 2)
+def snare_rhytm(pentagrama):
+    for _ in range(4):
+        snare(pentagrama, 0.25, 100, 44)
+        silence(pentagrama, 0.1)
+        snare(pentagrama, 0.25, 75, 42)
+        silence(pentagrama, 0.1)
+        snare(pentagrama, 0.25, 75, 42)
+        silence(pentagrama, 0.1)
+        snare(pentagrama, 0.25, 100, 44)
+        silence(pentagrama, 2)
+
+parte_snare = stream.Part()
+
+parte_snare.insert(0, instrument.SnareDrum())
+snare_rhytm(parte_snare)
+
+pentagrama.append(parte_snare)
 
 pentagrama.show('midi')
+#pentagrama.show()
