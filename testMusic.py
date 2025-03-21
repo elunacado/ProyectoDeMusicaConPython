@@ -103,5 +103,5 @@ snare_rhytm(parte_snare)
 pentagrama.append(parte_snare)
 
 pentagrama.show('midi')
-#pentagrama.write('midi', 'cumbion.mid')
+pentagrama.write('midi', 'cumbion.mid')
 #pentagrama.show()
