@@ -20,10 +20,11 @@ musica_reproduciendo = False
 musica_pausada = False
 volumen_original = 1.0  
 
-print("Presiona espacio para reproducir la cumbia ")
-print("Presiona espacio de nuevo para pausarla o reanudarla ")
-print("Presiona s para ddetenerla ")
-print("Presiona los numeros del 1 al 4 para recibir los anuncios ")
+print("Presiona espacio para reproducir la cumbia.")
+print("Presiona espacio de nuevo para pausarla o reanudarla.")
+print("Presiona 's' para detenerla.")
+print("Presiona los números del 1 al 4 para recibir los anuncios.")
+
 
 while True:
     if keyboard.is_pressed("space"):
