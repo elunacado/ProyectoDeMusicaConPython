@@ -96,5 +96,5 @@ pentagrama.append(parte_snare)
 pentagrama.append(parte_sax)
 
 pentagrama.show('midi')
-#pentagrama.write('midi', 'cumbion.mid')
+pentagrama.write('midi', 'cumbion.mid')
 #pentagrama.show()
