@@ -21,6 +21,9 @@ musica_pausada = False
 volumen_original = 1.0  
 
 print("Presiona espacio para reproducir la cumbia ")
+print("Presiona espacio de nuevo para pausarla o reanudarla ")
+print("Presiona s para ddetenerla ")
+print("Presiona los numeros del 1 al 4 para recibir los anuncios ")
 
 while True:
     if keyboard.is_pressed("space"):
@@ -29,11 +32,9 @@ while True:
             musica_reproduciendo = True 
             musica_pausada = False    
         elif musica_pausada:
-            print("Reanudar cumbia")
             mixer.music.unpause()
             musica_pausada = False  
         else:
-            print("Pausar cumbia")
             mixer.music.pause()
             musica_pausada = True  
         time.sleep(0.3)  
@@ -45,7 +46,6 @@ while True:
 
     for key, sonido in zip(["1", "2", "3", "4"], [primera_llamada, segunda_llamada, tercera_llamada, redes_sociales]):
         if keyboard.is_pressed(key):
-            print(f"Reproduciendo {sonido}")
 
             mixer.music.set_volume(0.3)
 
